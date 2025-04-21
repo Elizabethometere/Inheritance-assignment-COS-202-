@@ -1,0 +1,28 @@
+// Define the first interface
+interface Animal {
+    void eat();
+}
+
+// Define the second interface
+interface Mammal {
+    void walk();
+}
+
+// Implement both interfaces in a single class
+class Human implements Animal, Mammal {
+    @Override
+    public void eat() {
+        System.out.println("Human is eating.");
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("Human is walking.");
+    }
+
+    public static void main(String[] args) {
+        Human human = new Human();
+        human.eat();
+        human.walk();
+    }
+}
